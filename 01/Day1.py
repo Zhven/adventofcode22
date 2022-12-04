@@ -1,4 +1,4 @@
-if __name__ == '__main__':
+def getAnswer():
     with open("01\input.txt") as file:
         elfs = [s.split("\n") for s in file.read().split("\n\n")]
         elfs = [sum(int(j) for j in i if j!='') for i in elfs]
@@ -12,3 +12,6 @@ if __name__ == '__main__':
     print(mostCalories)
     print(elfs)
     print(top3Calories)
+
+if __name__ == '__main__':
+    getAnswer()
