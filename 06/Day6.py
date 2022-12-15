@@ -3,15 +3,15 @@ def main():
     with open('06\input.txt') as f:
         input = f.read()
 
-    startOfPacket = findIndex(input, 0, 4)
-    startOfMessage = findIndex(input, 0, 14)
+    start_of_packet = find_index(input, 0, 4)
+    start_of_message = find_index(input, 0, 14)
     
-    print(startOfPacket)
+    print(start_of_packet)
     # 1625
-    print(startOfMessage)
+    print(start_of_message)
     # 2250
 
-def findIndex(input, start, stop):
+def find_index(input, start, stop):
     size = stop
     while True:
         chunk = input[start:stop:1]

@@ -1,17 +1,17 @@
-def getAnswer():
+def get_answer():
     with open("01\input.txt") as file:
         elfs = [s.split("\n") for s in file.read().split("\n\n")]
         elfs = [sum(int(j) for j in i if j!='') for i in elfs]
         elfs.sort(reverse=True)
         
-        mostCalories = elfs[0]
+        most_calories = elfs[0]
 
-        top3Calories = sum(elfs[0:3])
+        top_3_calories = sum(elfs[0:3])
 
     print(elfs)
-    print(mostCalories)
+    print(most_calories)
     print(elfs)
-    print(top3Calories)
+    print(top_3_calories)
 
 if __name__ == '__main__':
-    getAnswer()
+    get_answer()
